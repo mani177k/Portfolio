@@ -54,8 +54,8 @@ export default function Hero() {
               className="w-full sm:w-auto border-green-600/50 text-green-600 hover:bg-green-950/30 hover:text-green-300 px-8 py-6 rounded-full text-lg gap-2"
               onClick={() => {
                 const link = document.createElement('a');
-                link.href = '/Manikandan Resume new.pdf';
-                link.download = 'Manikandan Resume new.pdf';
+                link.href = data.resumeUrl;
+                link.download = 'Manikandan_Resume.pdf';
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);

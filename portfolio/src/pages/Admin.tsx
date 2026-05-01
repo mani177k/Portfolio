@@ -117,6 +117,7 @@ export default function Admin() {
               <TabsTrigger value="experience" className="data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=active]:shadow-sm rounded-xl py-2.5 px-6 font-semibold">Experience</TabsTrigger>
               <TabsTrigger value="projects" className="data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=active]:shadow-sm rounded-xl py-2.5 px-6 font-semibold">Projects</TabsTrigger>
               <TabsTrigger value="education" className="data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=active]:shadow-sm rounded-xl py-2.5 px-6 font-semibold">Education</TabsTrigger>
+              <TabsTrigger value="resume" className="data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=active]:shadow-sm rounded-xl py-2.5 px-6 font-semibold">Resume</TabsTrigger>
             </TabsList>
 
             {/* About Tab */}
@@ -391,6 +392,44 @@ export default function Admin() {
                 className="w-full bg-slate-50 hover:bg-gray-200 text-slate-900 border border-gray-400">
                 <Plus size={16} className="mr-2" /> Add Education
               </Button>
+            </TabsContent>
+
+            {/* Resume Tab */}
+            <TabsContent value="resume" className="space-y-6">
+              <div className="bg-white/60 p-6 glass-card rounded-2xl space-y-4">
+                <h3 className="text-xl font-bold text-green-950 font-poppins">Update CV / Resume</h3>
+                <p className="text-sm text-green-700">Upload your latest PDF resume to update the download link on the homepage.</p>
+                
+                <div className="space-y-4">
+                  <div className="flex flex-col gap-2">
+                    <label className="text-xs text-slate-600">Current Resume Link/Data</label>
+                    <Input 
+                      value={formData.resumeUrl.length > 50 ? `${formData.resumeUrl.substring(0, 50)}...` : formData.resumeUrl} 
+                      readOnly 
+                      className="bg-slate-50 border-slate-200 text-slate-400 italic" 
+                    />
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-slate-800">Upload New PDF</label>
+                    <Input 
+                      type="file" 
+                      accept="application/pdf"
+                      onChange={(e) => {
+                        const file = e.target.files?.[0];
+                        if (file) {
+                          const reader = new FileReader();
+                          reader.onloadend = () => {
+                            setFormData({...formData, resumeUrl: reader.result as string});
+                          };
+                          reader.readAsDataURL(file);
+                        }
+                      }}
+                      className="bg-white border-slate-200 text-slate-900 h-12 py-2 cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-green-50 file:text-green-700 hover:file:bg-green-100"
+                    />
+                  </div>
+                </div>
+              </div>
             </TabsContent>
           </Tabs>
         </div>

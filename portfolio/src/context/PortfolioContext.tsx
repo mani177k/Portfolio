@@ -44,6 +44,7 @@ export type PortfolioData = {
   experience: Experience[];
   projects: Project[];
   education: Education[];
+  resumeUrl: string;
 };
 
 const initialData: PortfolioData = {
@@ -145,7 +146,8 @@ const initialData: PortfolioData = {
       period: "2021 - 2024",
       status: "Completed"
     }
-  ]
+  ],
+  resumeUrl: "/Manikandan Resume new.pdf"
 };
 
 type PortfolioContextType = {
