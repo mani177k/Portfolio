@@ -65,6 +65,12 @@ export default function Hero() {
               Download CV
             </Button>
           </div>
+
+          {/* Mobile Scroll Indicator */}
+          <div className="flex lg:hidden w-full justify-center mt-8 animate-bounce opacity-50 flex-col items-center gap-2">
+            <span className="text-[10px] font-black tracking-[0.3em] text-green-700 uppercase">Scroll</span>
+            <div className="w-0.5 h-12 bg-gradient-to-b from-green-600 to-transparent rounded-full"></div>
+          </div>
         </div>
 
         <div className="relative hidden md:flex justify-center items-center slide-up" style={{ animationDelay: '0.2s' }}>
