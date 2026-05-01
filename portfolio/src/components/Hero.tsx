@@ -102,7 +102,7 @@ export default function Hero() {
         </div>
       </div>
       
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-50">
+      <div className="hidden sm:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce opacity-50">
         <span className="text-[10px] font-black tracking-[0.3em] text-green-700 uppercase">Scroll</span>
         <div className="w-0.5 h-12 bg-gradient-to-b from-green-600 to-transparent rounded-full"></div>
       </div>
