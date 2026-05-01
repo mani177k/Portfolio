@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="bg-green-50/80 border-t border-green-100 py-12 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
         
-        <div className="text-2xl font-bold font-poppins mb-6">
+        <div className="text-xl sm:text-2xl font-bold font-poppins mb-6">
           <span className="text-green-950">Manikandan</span>
           <span className="text-green-600">&nbsp;A</span>
         </div>

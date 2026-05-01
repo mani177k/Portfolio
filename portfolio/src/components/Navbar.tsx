@@ -43,7 +43,7 @@ export default function Navbar() {
         style={{ width: `${scrollProgress}%` }}
       />
       <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
-        <div className="text-2xl font-bold font-poppins cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+        <div className="text-lg sm:text-2xl font-bold font-poppins cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <span className="text-slate-900 group-hover:text-green-600 transition-colors duration-500">M</span>
           <span className="text-green-600">anikandan</span>
           <span className="text-green-600">&nbsp;A</span>
