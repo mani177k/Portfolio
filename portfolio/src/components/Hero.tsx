@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="blob bg-emerald-500/20 w-56 h-56 md:w-80 md:h-80 rounded-full bottom-1/4 -right-10" style={{ animationDelay: '2s' }}></div>
       <div className="blob bg-green-600/10 w-48 h-48 md:w-72 md:h-72 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '4s' }}></div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center pb-32 md:pb-0">
         <div className="flex flex-col items-start gap-6 slide-up">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/60 border border-slate-200/50 text-sm font-medium text-green-600 backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
@@ -102,7 +102,7 @@ export default function Hero() {
         </div>
       </div>
       
-      <div className="hidden sm:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce opacity-50">
+      <div className="hidden lg:flex absolute bottom-10 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-bounce opacity-50">
         <span className="text-[10px] font-black tracking-[0.3em] text-green-700 uppercase">Scroll</span>
         <div className="w-0.5 h-12 bg-gradient-to-b from-green-600 to-transparent rounded-full"></div>
       </div>
