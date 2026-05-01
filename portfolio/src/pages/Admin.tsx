@@ -26,7 +26,7 @@ export default function Admin() {
     toast({
       title: "Changes Saved",
       description: "Portfolio data has been updated successfully.",
-      className: "bg-green-900 border-green-500 text-slate-900",
+      className: "bg-white border-green-500 text-green-950 shadow-2xl",
     });
   };
 
