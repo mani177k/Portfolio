@@ -135,6 +135,11 @@ export default function Hero() {
         </div>
       </div>
       
+      {/* Transition Decorative Element */}
+      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-full h-64 bg-gradient-to-b from-transparent via-green-100/20 to-transparent blur-3xl pointer-events-none"></div>
+      <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-30 lg:opacity-20">
+        <div className="w-px h-24 bg-gradient-to-b from-green-600 to-transparent"></div>
+      </div>
     </section>
   );
 }

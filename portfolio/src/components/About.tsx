@@ -9,14 +9,19 @@ export default function About() {
   return (
     <section id="about" className="py-24 relative overflow-hidden">
       <div className="section-label">01 / About</div>
+      
+      {/* Decorative Background Shape */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-green-50/50 rounded-full blur-3xl -z-10 translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-50/50 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col items-center text-center mb-16 slide-up">
+        <div className="flex flex-col items-center text-center mb-16 reveal">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">About <span className="text-green-600">Me</span></h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="slide-up">
+          <div className="reveal">
             <Card className="glass-card premium-card border-none">
               <CardContent className="p-10">
                 <h3 className="text-2xl font-bold text-green-950 mb-6 font-poppins flex items-center gap-3">
@@ -30,16 +35,18 @@ export default function About() {
             </Card>
           </div>
 
-          <div className="grid sm:grid-cols-2 gap-6 slide-up" style={{ animationDelay: '0.2s' }}>
+          <div className="grid sm:grid-cols-2 gap-6">
             {data.about.highlights.map((highlight, index) => (
-              <Card key={index} className="glass-card premium-card group border-none">
-                <CardContent className="p-8 flex flex-col gap-4">
-                  <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center group-hover:bg-green-600 transition-colors duration-500">
-                    <CheckCircle2 size={24} className="text-green-600 group-hover:text-white transition-colors" />
-                  </div>
-                  <p className="text-green-950 font-bold text-lg leading-tight">{highlight}</p>
-                </CardContent>
-              </Card>
+              <div key={index} className={`reveal stagger-${index + 1}`}>
+                <Card className="glass-card premium-card group border-none h-full">
+                  <CardContent className="p-8 flex flex-col gap-4">
+                    <div className="w-12 h-12 rounded-2xl bg-green-50 flex items-center justify-center group-hover:bg-green-600 transition-colors duration-500">
+                      <CheckCircle2 size={24} className="text-green-600 group-hover:text-white transition-colors" />
+                    </div>
+                    <p className="text-green-950 font-bold text-lg leading-tight">{highlight}</p>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
         </div>
