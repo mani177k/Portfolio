@@ -56,22 +56,40 @@ export default function Hero() {
               onClick={() => {
                 if (!data.resumeUrl) return;
                 
-                const link = document.createElement('a');
-                if (data.resumeUrl.startsWith('data:')) {
-                  // Handle Base64 Data URL
-                  link.href = data.resumeUrl;
+                // For base64 data, we convert to blob for more reliable downloading
+                if (data.resumeUrl.startsWith('data:application/pdf;base64,')) {
+                  const base64Content = data.resumeUrl.split(',')[1];
+                  const byteCharacters = atob(base64Content);
+                  const byteNumbers = new Array(byteCharacters.length);
+                  for (let i = 0; i < byteCharacters.length; i++) {
+                    byteNumbers[i] = byteCharacters.charCodeAt(i);
+                  }
+                  const byteArray = new Uint8Array(byteNumbers);
+                  const blob = new Blob([byteArray], { type: 'application/pdf' });
+                  const url = URL.createObjectURL(blob);
+                  
+                  const link = document.createElement('a');
+                  link.href = url;
+                  link.download = 'Manikandan_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  
+                  // Cleanup
+                  setTimeout(() => {
+                    document.body.removeChild(link);
+                    URL.revokeObjectURL(url);
+                  }, 100);
                 } else {
-                  // Handle regular file path
+                  // For regular paths (like the initial public folder link)
+                  const link = document.createElement('a');
                   link.href = data.resumeUrl;
+                  link.download = 'Manikandan_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  setTimeout(() => {
+                    document.body.removeChild(link);
+                  }, 100);
                 }
-                
-                link.setAttribute('download', 'Manikandan_Resume.pdf');
-                link.style.display = 'none';
-                document.body.appendChild(link);
-                link.click();
-                setTimeout(() => {
-                  document.body.removeChild(link);
-                }, 100);
               }}
             >
               <Download size={18} />
