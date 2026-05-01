@@ -401,15 +401,6 @@ export default function Admin() {
                 <p className="text-sm text-green-700">Upload your latest PDF resume to update the download link on the homepage.</p>
                 
                 <div className="space-y-4">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-xs text-slate-600">Current Resume Link/Data</label>
-                    <Input 
-                      value={(formData.resumeUrl?.length ?? 0) > 50 ? `${formData.resumeUrl.substring(0, 50)}...` : (formData.resumeUrl ?? '')} 
-                      readOnly 
-                      className="bg-slate-50 border-slate-200 text-slate-400 italic" 
-                    />
-                  </div>
-
                   <div className="space-y-2">
                     <label className="text-sm font-medium text-slate-800">Upload New PDF</label>
                     <Input 
