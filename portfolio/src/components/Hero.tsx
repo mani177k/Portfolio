@@ -54,12 +54,24 @@ export default function Hero() {
               variant="outline" 
               className="w-full sm:w-auto border-green-600/50 text-green-600 hover:bg-green-950/30 hover:text-green-300 px-8 py-6 rounded-full text-lg gap-2"
               onClick={() => {
+                if (!data.resumeUrl) return;
+                
                 const link = document.createElement('a');
-                link.href = data.resumeUrl;
-                link.download = 'Manikandan_Resume.pdf';
+                if (data.resumeUrl.startsWith('data:')) {
+                  // Handle Base64 Data URL
+                  link.href = data.resumeUrl;
+                } else {
+                  // Handle regular file path
+                  link.href = data.resumeUrl;
+                }
+                
+                link.setAttribute('download', 'Manikandan_Resume.pdf');
+                link.style.display = 'none';
                 document.body.appendChild(link);
                 link.click();
-                document.body.removeChild(link);
+                setTimeout(() => {
+                  document.body.removeChild(link);
+                }, 100);
               }}
             >
               <Download size={18} />
