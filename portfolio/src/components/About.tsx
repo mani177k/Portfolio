@@ -11,7 +11,7 @@ export default function About() {
       <div className="section-label">01 / About</div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-16 slide-up">
-          <h2 className="text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">About <span className="text-green-600">Me</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">About <span className="text-green-600">Me</span></h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full"></div>
         </div>
 

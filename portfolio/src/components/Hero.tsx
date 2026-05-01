@@ -7,9 +7,9 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Animated Blobs */}
-      <div className="blob bg-green-500/20 w-96 h-96 rounded-full top-1/4 -left-20"></div>
-      <div className="blob bg-emerald-500/20 w-80 h-80 rounded-full bottom-1/4 -right-10" style={{ animationDelay: '2s' }}></div>
-      <div className="blob bg-green-600/10 w-72 h-72 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '4s' }}></div>
+      <div className="blob bg-green-500/20 w-64 h-64 md:w-96 md:h-96 rounded-full top-1/4 -left-20"></div>
+      <div className="blob bg-emerald-500/20 w-56 h-56 md:w-80 md:h-80 rounded-full bottom-1/4 -right-10" style={{ animationDelay: '2s' }}></div>
+      <div className="blob bg-green-600/10 w-48 h-48 md:w-72 md:h-72 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ animationDelay: '4s' }}></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col items-start gap-6 slide-up">
@@ -21,14 +21,14 @@ export default function Hero() {
             Available for new projects
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-black font-poppins leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-black font-poppins leading-tight">
             Hi, I'm <br />
             <span className="premium-gradient-text">
               Manikandan A
             </span>
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-800">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-slate-800">
             UI/UX Developer & Data Analyst
           </h2>
           
@@ -41,9 +41,9 @@ export default function Hero() {
             <span>Kodambakkam, Chennai</span>
           </div>
 
-          <div className="flex flex-wrap gap-4 mt-4">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-4 w-full sm:w-auto">
             <Button 
-              className="bg-green-600 shadow-lg shadow-green-600/20 hover:-translate-y-1 hover:shadow-green-600/40 transition-all duration-300 hover:bg-green-500 text-white px-8 py-6 rounded-full text-lg gap-2 group"
+              className="w-full sm:w-auto bg-green-600 shadow-lg shadow-green-600/20 hover:-translate-y-1 hover:shadow-green-600/40 transition-all duration-300 hover:bg-green-500 text-white px-8 py-6 rounded-full text-lg gap-2 group"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Get In Touch 
@@ -51,7 +51,7 @@ export default function Hero() {
             </Button>
             <Button 
               variant="outline" 
-              className="border-green-600/50 text-green-600 hover:bg-green-950/30 hover:text-green-300 px-8 py-6 rounded-full text-lg gap-2"
+              className="w-full sm:w-auto border-green-600/50 text-green-600 hover:bg-green-950/30 hover:text-green-300 px-8 py-6 rounded-full text-lg gap-2"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/Manikandan Resume new.pdf';

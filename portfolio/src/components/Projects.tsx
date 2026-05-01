@@ -16,7 +16,7 @@ export default function Projects() {
       <div className="section-label">04 / Projects</div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-16 slide-up">
-          <h2 className="text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">Featured <span className="text-green-600">Projects</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">Featured <span className="text-green-600">Projects</span></h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full"></div>
         </div>
 
@@ -78,9 +78,9 @@ export default function Projects() {
                 </DialogClose>
               </div>
               
-              <div className="p-6 sm:p-8">
+              <div className="p-4 sm:p-8">
                 <DialogHeader>
-                  <DialogTitle className="text-2xl sm:text-3xl font-bold font-poppins text-slate-900 mb-2">
+                  <DialogTitle className="text-xl sm:text-3xl font-bold font-poppins text-slate-900 mb-2">
                     {selectedProject.title}
                   </DialogTitle>
                   <DialogDescription className="text-slate-600 text-base">

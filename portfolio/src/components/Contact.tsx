@@ -90,7 +90,7 @@ export default function Contact() {
       <div className="section-label">06 / Contact</div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-16 slide-up">
-          <h2 className="text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">Get In <span className="text-green-600">Touch</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">Get In <span className="text-green-600">Touch</span></h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full"></div>
           <p className="mt-6 text-green-700 max-w-2xl mx-auto font-medium">
             Have a project in mind or looking for a skilled UI/UX Developer & Data Analyst? 

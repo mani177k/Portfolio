@@ -93,10 +93,10 @@ export default function Admin() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-6">
           <div>
-            <h1 className="text-4xl font-black font-poppins text-green-950 mb-2">Admin <span className="text-green-600">Dashboard</span></h1>
+            <h1 className="text-3xl sm:text-4xl font-black font-poppins text-green-950 mb-2">Admin <span className="text-green-600">Dashboard</span></h1>
             <p className="text-green-700 font-medium">Control and curate your professional presence</p>
           </div>
-          <div className="flex gap-4 w-full md:w-auto">
+          <div className="flex flex-wrap gap-4 w-full md:w-auto">
             <Button variant="outline" onClick={() => navigate('/')} className="border-green-200 text-green-800 hover:bg-green-100/50 rounded-xl h-12 px-6">
               <ArrowLeft size={16} className="mr-2" /> Back
             </Button>

@@ -11,7 +11,7 @@ export default function Experience() {
       <div className="section-label">03 / Experience</div>
       <div className="max-w-4xl mx-auto px-6 relative z-10">
         <div className="flex flex-col items-center text-center mb-16 slide-up">
-          <h2 className="text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">Work <span className="text-green-600">Experience</span></h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black font-poppins mb-4 tracking-tight">Work <span className="text-green-600">Experience</span></h2>
           <div className="h-1.5 w-24 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full"></div>
         </div>
 
