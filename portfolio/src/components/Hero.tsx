@@ -4,6 +4,7 @@ import { Button } from './ui/button';
 import { ArrowRight, Download, MapPin } from 'lucide-react';
 
 export default function Hero() {
+  const { data } = usePortfolio();
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background Animated Blobs */}
