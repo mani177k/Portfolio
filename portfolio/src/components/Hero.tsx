@@ -135,6 +135,39 @@ export default function Hero() {
         </div>
       </div>
       
+      {/* Mechanical Circle Animation Transition */}
+      <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center pointer-events-none">
+        <div className="relative w-32 h-32 flex items-center justify-center">
+          {/* Main Gear */}
+          <div className="absolute w-24 h-24 border-4 border-dashed border-green-500/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
+          <div className="absolute w-24 h-24 flex items-center justify-center text-green-500/30 animate-[spin_15s_linear_infinite]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+          </div>
+          
+          {/* Small Gear Top Right */}
+          <div className="absolute -top-4 -right-4 w-12 h-12 text-emerald-500/20 animate-[spin_8s_linear_infinite_reverse]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+              <circle cx="12" cy="12" r="3" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </div>
+
+          {/* Small Gear Bottom Left */}
+          <div className="absolute -bottom-2 -left-6 w-16 h-16 text-lime-500/10 animate-[spin_12s_linear_infinite]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              <circle cx="12" cy="12" r="6" />
+            </svg>
+          </div>
+          
+          {/* Inner Core */}
+          <div className="w-4 h-4 bg-green-500/20 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+
       {/* Transition Decorative Element */}
       <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-full h-64 bg-gradient-to-b from-transparent via-green-100/20 to-transparent blur-3xl pointer-events-none"></div>
       <div className="absolute -bottom-16 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-30 lg:opacity-20">
