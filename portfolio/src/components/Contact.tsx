@@ -103,18 +103,18 @@ export default function Contact() {
             {contactInfo.map((info, idx) => (
               <div key={idx} className={`reveal stagger-${idx + 1}`}>
                 <Card className="glass-card premium-card hover-glow border-none group transition-all duration-500 shadow-sm">
-                  <CardContent className="p-6 flex items-center gap-4">
+                  <CardContent className="p-4 sm:p-6 flex items-center gap-4">
                     <div className="bg-green-100 p-4 rounded-2xl text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all duration-500 shadow-inner">
                       {info.icon}
                     </div>
                     <div>
                       <p className="text-sm text-green-700 font-medium">{info.label}</p>
                       {info.link ? (
-                        <a href={info.link} target="_blank" rel="noopener noreferrer" className="text-green-950 hover:text-green-600 transition-colors font-bold">
+                        <a href={info.link} target="_blank" rel="noopener noreferrer" className="text-green-950 hover:text-green-600 transition-colors font-bold break-all text-sm sm:text-base">
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-green-950 font-bold">{info.value}</p>
+                        <p className="text-green-950 font-bold break-all text-sm sm:text-base">{info.value}</p>
                       )}
                     </div>
                   </CardContent>
@@ -125,7 +125,7 @@ export default function Contact() {
 
           <div className="lg:col-span-3 reveal stagger-3">
             <Card className="glass-card premium-card hover-glow border-none h-full shadow-sm">
-              <CardContent className="p-8">
+              <CardContent className="p-6 sm:p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div className="space-y-2">
