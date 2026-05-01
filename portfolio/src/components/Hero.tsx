@@ -135,36 +135,22 @@ export default function Hero() {
         </div>
       </div>
       
-      {/* Mechanical Circle Animation Transition */}
-      <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center pointer-events-none">
-        <div className="relative w-32 h-32 flex items-center justify-center">
-          {/* Main Gear */}
-          <div className="absolute w-24 h-24 border-4 border-dashed border-green-500/20 rounded-full animate-[spin_10s_linear_infinite]"></div>
-          <div className="absolute w-24 h-24 flex items-center justify-center text-green-500/30 animate-[spin_15s_linear_infinite]">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-              <circle cx="12" cy="12" r="3" />
+      {/* Mechanical Interlocking Gears Animation */}
+      <div className="absolute -bottom-24 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center pointer-events-none scale-75 md:scale-100">
+        <div className="relative w-48 h-48">
+          {/* Large Gear (Left/Top) */}
+          <div className="absolute top-0 left-0 w-32 h-32 animate-[spin_15s_linear_infinite]">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-green-500/20 drop-shadow-[0_0_8px_rgba(34,197,94,0.2)]">
+              <path fill="currentColor" d="M100,50c0-4.1-2.2-7.8-5.8-9.7l-2.4-1.3c-0.6-2.6-1.5-5.1-2.7-7.5l1.6-2.2c2.4-3.3,2.4-7.8,0-11.2c-2.4-3.3-6.6-4.9-10.4-4l-2.6,0.6c-1.8-2-3.8-3.8-6-5.4l0.4-2.7c0.6-4.1-1.3-8.2-4.9-10.4c-3.6-2.2-8.1-2.1-11.5,0.2l-2.2,1.5c-2.4-0.8-4.9-1.4-7.4-1.7V4.1c0-4.1-3.3-7.5-7.5-7.5s-7.5,3.3-7.5,7.5v2.1c-2.6,0.3-5.1,0.9-7.5,1.7l-2.2-1.5c-3.4-2.3-7.9-2.4-11.5-0.2c-3.6,2.2-5.5,6.3-4.9,10.4l0.4,2.7c-2.2,1.6-4.2,3.4-6,5.4l-2.6-0.6c-3.8-0.9-8.1,0.7-10.4,4c-2.4,3.3-2.4,7.9,0,11.2l1.6,2.2c-1.2,2.4-2.1,4.9-2.7,7.5l-2.4,1.3C2.2,42.2,0,45.9,0,50c0,4.1,2.2,7.8,5.8,9.7l2.4,1.3c0.6,2.6,1.5,5.1,2.7,7.5l-1.6,2.2c-2.4,3.3-2.4,7.8,0,11.2c2.4,3.3,6.6,4.9,10.4,4l2.6-0.6c1.8,2,3.8,3.8,6,5.4l-0.4,2.7c-0.6,4.1,1.3,8.2,4.9,10.4c3.6,2.2,8.1,2.1,11.5-0.2l2.2-1.5c2.4,0.8,4.9,1.4,7.4,1.7v2.1c0,4.1,3.3,7.5,7.5,7.5s7.5-3.3,7.5-7.5v-2.1c2.6-0.3,5.1-0.9,7.5-1.7l2.2,1.5c3.4,2.3,7.9,2.4,11.5,0.2c3.6-2.2,5.5-6.3,4.9-10.4l-0.4-2.7c2.2-1.6,4.2-3.4,6-5.4l2.6,0.6c3.8,0.9,8.1-0.7,10.4-4c2.4-3.3,2.4-7.9,0-11.2l-1.6-2.2c1.2-2.4,2.1-4.9,2.7-7.5l2.4-1.3C97.8,57.8,100,54.1,100,50z M50,65c-8.3,0-15-6.7-15-15s6.7-15,15-15s15,6.7,15,15S58.3,65,50,65z" />
             </svg>
           </div>
           
-          {/* Small Gear Top Right */}
-          <div className="absolute -top-4 -right-4 w-12 h-12 text-emerald-500/20 animate-[spin_8s_linear_infinite_reverse]">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-              <circle cx="12" cy="12" r="3" />
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          {/* Small Gear (Bottom/Right) */}
+          <div className="absolute bottom-2 right-2 w-20 h-20 animate-[spin_9.375s_linear_infinite_reverse]">
+            <svg viewBox="0 0 100 100" className="w-full h-full text-emerald-500/15 drop-shadow-[0_0_5px_rgba(16,185,129,0.1)]">
+              <path fill="currentColor" d="M100,50c0-4.1-2.2-7.8-5.8-9.7l-2.4-1.3c-0.6-2.6-1.5-5.1-2.7-7.5l1.6-2.2c2.4-3.3,2.4-7.8,0-11.2c-2.4-3.3-6.6-4.9-10.4-4l-2.6,0.6c-1.8-2-3.8-3.8-6-5.4l0.4-2.7c0.6-4.1-1.3-8.2-4.9-10.4c-3.6-2.2-8.1-2.1-11.5,0.2l-2.2,1.5c-2.4-0.8-4.9-1.4-7.4-1.7V4.1c0-4.1-3.3-7.5-7.5-7.5s-7.5,3.3-7.5,7.5v2.1c-2.6,0.3-5.1,0.9-7.5,1.7l-2.2-1.5c-3.4-2.3-7.9-2.4-11.5-0.2c-3.6,2.2-5.5,6.3-4.9,10.4l0.4,2.7c-2.2,1.6-4.2,3.4-6,5.4l-2.6-0.6c-3.8-0.9-8.1,0.7-10.4,4c-2.4,3.3-2.4,7.9,0,11.2l1.6,2.2c-1.2,2.4-2.1,4.9-2.7,7.5l-2.4,1.3C2.2,42.2,0,45.9,0,50c0,4.1,2.2,7.8,5.8,9.7l2.4,1.3c0.6,2.6,1.5,5.1,2.7,7.5l-1.6,2.2c-2.4,3.3-2.4,7.8,0,11.2c2.4,3.3,6.6,4.9,10.4,4l2.6-0.6c1.8,2,3.8,3.8,6,5.4l-0.4,2.7c-0.6,4.1,1.3,8.2,4.9,10.4c3.6,2.2,8.1,2.1,11.5-0.2l2.2-1.5c2.4,0.8,4.9,1.4,7.4,1.7v2.1c0,4.1,3.3,7.5,7.5,7.5s7.5-3.3,7.5-7.5v-2.1c2.6-0.3,5.1-0.9,7.5-1.7l2.2,1.5c3.4,2.3,7.9,2.4,11.5,0.2c3.6-2.2,5.5-6.3,4.9-10.4l-0.4-2.7c2.2-1.6,4.2-3.4,6-5.4l2.6,0.6c3.8,0.9,8.1-0.7,10.4-4c2.4-3.3,2.4-7.9,0-11.2l-1.6-2.2c1.2-2.4,2.1-4.9,2.7-7.5l2.4-1.3C97.8,57.8,100,54.1,100,50z M50,65c-8.3,0-15-6.7-15-15s6.7-15,15-15s15,6.7,15,15S58.3,65,50,65z" />
             </svg>
           </div>
-
-          {/* Small Gear Bottom Left */}
-          <div className="absolute -bottom-2 -left-6 w-16 h-16 text-lime-500/10 animate-[spin_12s_linear_infinite]">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
-              <circle cx="12" cy="12" r="6" />
-            </svg>
-          </div>
-          
-          {/* Inner Core */}
-          <div className="w-4 h-4 bg-green-500/20 rounded-full animate-pulse"></div>
         </div>
       </div>
 
