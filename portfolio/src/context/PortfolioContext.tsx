@@ -162,7 +162,8 @@ export const PortfolioProvider: React.FC<{ children: ReactNode }> = ({ children 
     const saved = localStorage.getItem('portfolioData');
     if (saved) {
       try {
-        return JSON.parse(saved);
+        const parsed = JSON.parse(saved);
+        return { ...initialData, ...parsed };
       } catch (e) {
         console.error("Failed to parse portfolio data", e);
       }

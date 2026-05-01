@@ -404,7 +404,7 @@ export default function Admin() {
                   <div className="flex flex-col gap-2">
                     <label className="text-xs text-slate-600">Current Resume Link/Data</label>
                     <Input 
-                      value={formData.resumeUrl.length > 50 ? `${formData.resumeUrl.substring(0, 50)}...` : formData.resumeUrl} 
+                      value={(formData.resumeUrl?.length ?? 0) > 50 ? `${formData.resumeUrl.substring(0, 50)}...` : (formData.resumeUrl ?? '')} 
                       readOnly 
                       className="bg-slate-50 border-slate-200 text-slate-400 italic" 
                     />
